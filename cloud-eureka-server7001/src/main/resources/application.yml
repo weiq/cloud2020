@@ -8,5 +8,6 @@ eureka:
     fetch-registry: false # false 表示自已端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
       #设置Eureka Server交互的地址查询服务和注册服务都需要依赖这个
-      defaultZone: http://eureka7002.com:7002/eureka/
+      #defaultZone: http://eureka7002.com:7002/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
